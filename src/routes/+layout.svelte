@@ -1,4 +1,5 @@
 <script lang="ts">
+    import "../app.css";
     import { ENavigationName, type INavigationOption } from '$routes/types';
 
     const navOptions: INavigationOption[] = [
@@ -36,7 +37,7 @@
     }
 </script>
 
-<nav>
+<nav class="sticky top-0 z-30 w-full px-2 py-4 sm:px-4">
   {#each navOptions as option}
   <a href={option.anchor} on:click={(event) => handleAnchorClick(event, option.name)}>
     {option.name}
