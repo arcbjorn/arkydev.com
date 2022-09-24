@@ -24,22 +24,11 @@
         anchor: `#${ENavigationName.CONTACT}`
       }
     ]
-
-    function handleAnchorClick (event: Event, name: ENavigationName) {
-      event.preventDefault()
-      const anchor = document.getElementById(name)
-      if (anchor) {
-        window.scrollTo({
-          top: anchor.offsetTop,
-          behavior: 'smooth'
-        })
-      }
-    }
 </script>
 
 <nav class="sticky top-0 z-30 w-full px-2 py-4 sm:px-4">
   {#each navOptions as option}
-  <a href={option.anchor} on:click={(event) => handleAnchorClick(event, option.name)}>
+  <a href={option.anchor}>
     {option.name}
   </a>
   {/each}
