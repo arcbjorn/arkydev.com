@@ -1,12 +1,8 @@
-export enum ENavigationName {
-	HOME = 'home',
-	SERVICES = 'services',
-	WHY = 'why',
-	ABOUT = 'about',
-	CONTACT = 'contact'
-}
+import type { Token } from 'src/i18n/enums';
+
+type TNavigationToken = Token.HOME | Token.SERVICES | Token.WHY | Token.ABOUT | Token.CONTACT;
 
 export interface INavigationOption {
-	name: ENavigationName;
+	name: TNavigationToken;
 	anchor: string;
 }

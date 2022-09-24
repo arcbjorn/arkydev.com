@@ -1,37 +1,51 @@
 <script lang="ts">
     import "../app.css";
-    import { ENavigationName, type INavigationOption } from '$routes/types';
+    import type { INavigationOption } from '$routes/types';
+	  import { Token } from "$i18n/enums";
 
     const navOptions: INavigationOption[] = [
       {
-        name: ENavigationName.HOME,
+        name: Token.HOME,
         anchor: '/#'
       },
       {
-        name: ENavigationName.SERVICES,
-        anchor: `#${ENavigationName.SERVICES}`
+        name: Token.SERVICES,
+        anchor: `#${Token.SERVICES}`
       },
       {
-        name: ENavigationName.WHY,
-        anchor: `#${ENavigationName.WHY}`
+        name: Token.WHY,
+        anchor: `#${Token.WHY}`
       },
       {
-        name: ENavigationName.ABOUT,
-        anchor: `#${ENavigationName.ABOUT}`
+        name: Token.ABOUT,
+        anchor: `#${Token.ABOUT}`
       },
       {
-        name: ENavigationName.CONTACT,
-        anchor: `#${ENavigationName.CONTACT}`
+        name: Token.CONTACT,
+        anchor: `#${Token.CONTACT}`
       }
     ]
 </script>
 
-<nav class="sticky top-0 z-30 w-full px-2 py-4 sm:px-4">
-  {#each navOptions as option}
-  <a href={option.anchor}>
-    {option.name}
-  </a>
-  {/each}
-</nav>
+<header>
+  logo
+  <nav>
+    {#each navOptions as option}
+    <a href={option.anchor} class="px-2">
+      {option.name}
+    </a>
+    {/each}
+  </nav>
+</header>
 
 <slot></slot>
+
+<style>
+  header {
+    @apply sticky top-0 z-30 w-full px-4 py-4 sm:px-4 flex justify-around;
+  }
+  nav {
+    @apply flex justify-around;
+  }
+	
+</style>
