@@ -1,10 +1,14 @@
 <script lang="ts">
   import Navigation from '$components/Navigation.svelte';
+  import LanguageSelect from './LanguageSelect.svelte';
 </script>
 
 <header>
   <a href="/#">logo</a>
-  <Navigation />
+  <div class="flex justify-around">
+    <Navigation />
+    <LanguageSelect />
+  </div>
 </header>
 
 <style>
