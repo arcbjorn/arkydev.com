@@ -13,6 +13,6 @@
 
 <style>
   header {
-    @apply sticky top-0 z-30 w-full py-8 sm:py-4 flex justify-around;
+    @apply sticky top-0 z-30 w-full py-8 flex justify-around border-b-2 bg-white;
   }
 </style>
