@@ -1,8 +1,8 @@
-import type { Token } from 'src/i18n/enums';
+import type { EToken } from '$l18n/enums';
 
-type TNavigationToken = Token.HOME | Token.SERVICES | Token.WHY | Token.ABOUT | Token.CONTACT;
+type TNavigationToken = EToken.SERVICES | EToken.ABOUT | EToken.CONTACT;
 
 export interface INavigationOption {
-	name: TNavigationToken;
+	token: TNavigationToken;
 	anchor: string;
 }
