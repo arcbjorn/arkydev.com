@@ -30,7 +30,7 @@
   logo
   <nav>
     {#each navOptions as option}
-    <a href={option.anchor} class="px-2">
+    <a href={option.anchor} class="option">
       {option.name}
     </a>
     {/each}
@@ -39,10 +39,13 @@
 
 <style>
   header {
-    @apply sticky top-0 z-30 w-full px-4 py-4 flex justify-around;
+    @apply sticky top-0 z-30 w-full py-8 sm:py-4 flex justify-around;
   }
   nav {
-    @apply flex justify-around;
+    @apply flex justify-around invisible lg:visible;
+  }
+  .option {
+    @apply px-4 sm:px-8;
   }
 	
 </style>
