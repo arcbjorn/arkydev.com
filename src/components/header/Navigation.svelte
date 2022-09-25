@@ -20,19 +20,10 @@
   ];
 </script>
 
-<nav>
+<nav class="flex justify-around">
   {#each navOptions as option}
-    <a href={option.anchor} class="option">
+    <a href={option.anchor} class="px-4 sm:px-8">
       {$t(option.token)}
     </a>
   {/each}
 </nav>
-
-<style>
-  nav {
-    @apply flex justify-around;
-  }
-  .option {
-    @apply px-4 sm:px-8;
-  }
-</style>
