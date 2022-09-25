@@ -4,8 +4,8 @@
 </script>
 
 <main>
-  <div class="flex justify-around flex-wrap">
-    <div class="self-center">
+  <div class="flex justify-around gap-4 flex-wrap">
+    <div class="self-center hidden lg:block">
       <CompanyIntro />
     </div>
     <Description />
