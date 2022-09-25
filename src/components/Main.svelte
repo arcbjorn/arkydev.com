@@ -5,16 +5,16 @@
 </script>
 
 <main>
-  <div class="flex justify-around">
-    <div>
+  <div class="flex justify-around flex-wrap">
+    <div class="p-8">
       <div class="text-4xl">Arky Software Development</div>
       <div>{$t(EToken.SLOGAN)}</div>
     </div>
-    <div class="flex flex-col">
-      <div class="text-xl pb-4">
+    <div class="flex flex-col p-8">
+      <div class="text-lg sm:text-xl">
         {@html $t(EToken.DESCRIPTION)}
       </div>
-      <a href={NAVIGATION_ANCHOR[EToken.SERVICES]}>
+      <a href={NAVIGATION_ANCHOR[EToken.SERVICES]} class="py-8">
         <button class="call-to-action">{$t(EToken.CALL)}</button>
       </a>
     </div>
