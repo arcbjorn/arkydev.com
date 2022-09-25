@@ -12,11 +12,11 @@
   </div>
 
   <div class="hidden md:flex lg:hidden flex-col">
-    <span class="text-sm font-bold">{ECompanyName.FULL}</span>
+    <span class="text-md font-bold">{ECompanyName.FULL}</span>
     <span class="text-xs">{$t(EToken.SLOGAN)}</span>
   </div>
 
-  <div class="md:hidden">{ECompanyName.SHORT}</div>
+  <div class="md:hidden text-lg font-bold">{ECompanyName.SHORT}</div>
 
   <div class="lg:hidden">MobileNavigation</div>
 </header>
