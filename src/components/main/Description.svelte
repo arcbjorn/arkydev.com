@@ -16,10 +16,10 @@
 
 <style>
   .call-to-action {
-    @apply p-4 border-2 bg-white;
+    @apply p-4 border-2 bg-white border-green-500;
   }
 
   .call-to-action:hover {
-    @apply bg-black text-white;
+    @apply bg-black text-white border-black;
   }
 </style>
