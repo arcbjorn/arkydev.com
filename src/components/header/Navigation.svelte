@@ -30,7 +30,7 @@
 
 <style>
   nav {
-    @apply flex justify-around invisible lg:visible;
+    @apply flex justify-around;
   }
   .option {
     @apply px-4 sm:px-8;

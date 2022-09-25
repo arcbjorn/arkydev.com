@@ -5,7 +5,7 @@
 
 <header>
   <a href="/#">logo</a>
-  <div class="flex justify-around">
+  <div class="flex justify-around invisible lg:visible">
     <Navigation />
     <LanguageSelect />
   </div>
