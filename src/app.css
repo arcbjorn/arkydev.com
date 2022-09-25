@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('/fonts/IBMPlexMono-Regular.ttf');
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('/fonts/IBMPlexMono-Bold.ttf');
+  font-weight: bold;
+  font-display: swap;
+}
+
 html {
+  font-family: 'IBMPlexMono', 'Courier New', Courier, monospace;
   scroll-behavior: smooth;
   height: 100%;
 }
