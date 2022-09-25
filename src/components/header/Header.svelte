@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Navigation from '$components/Navigation.svelte';
-  import LanguageSelect from './LanguageSelect.svelte';
+  import Navigation from '$components/header/Navigation.svelte';
+  import LanguageSelect from '$components/header/LanguageSelect.svelte';
 </script>
 
 <header>
