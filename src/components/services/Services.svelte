@@ -15,5 +15,6 @@
 <style>
   .services {
     @apply w-full flex flex-col justify-around py-8 border-b-2 bg-white;
+    background-image: url(/cyber_bg.svg);
   }
 </style>
