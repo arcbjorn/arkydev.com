@@ -7,6 +7,6 @@ export enum EToken {
   SERVICES = 'services',
   ABOUT = 'about',
   CONTACT = 'contact',
-  SLOGAN = 'SLOGAN',
+  SLOGAN = 'slogan',
   DESCRIPTION = 'description'
 }
