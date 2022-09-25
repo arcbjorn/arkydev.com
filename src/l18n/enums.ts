@@ -1,10 +1,12 @@
 export enum ELanguage {
-	EN = 'en',
-	DE = 'de'
+  EN = 'en',
+  DE = 'de'
 }
 
 export enum EToken {
-	SERVICES = 'services',
-	ABOUT = 'about',
-	CONTACT = 'contact'
+  SERVICES = 'services',
+  ABOUT = 'about',
+  CONTACT = 'contact',
+  SLOGAN = 'SLOGAN',
+  DESCRIPTION = 'description'
 }
