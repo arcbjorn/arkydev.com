@@ -1,18 +1,32 @@
 <script lang="ts">
+  import { t } from '$l18n';
+  import { EToken } from '$l18n/enums';
   import Navigation from '$components/header/Navigation.svelte';
-  import LanguageSelect from '$components/header/LanguageSelect.svelte';
+  import { ECompanyName } from '$components/enums';
 </script>
 
 <header>
-  <a href="/#">logo</a>
-  <div class="flex justify-around invisible lg:visible">
+  <div class="onlyLargeScreen" />
+  <div class="onlyLargeScreen">
     <Navigation />
-    <LanguageSelect />
   </div>
+
+  <div class="hidden md:flex lg:hidden flex-col">
+    <span class="text-sm font-bold">{ECompanyName.FULL}</span>
+    <span class="text-xs">{$t(EToken.SLOGAN)}</span>
+  </div>
+
+  <div class="md:hidden">{ECompanyName.SHORT}</div>
+
+  <div class="lg:hidden">MobileNavigation</div>
 </header>
 
 <style>
+  .onlyLargeScreen {
+    @apply hidden lg:block;
+  }
+
   header {
-    @apply sticky top-0 z-30 w-full py-8 flex justify-around border-b-2 bg-white;
+    @apply sticky top-0 z-30 w-full py-8 flex justify-around items-center border-b-2 bg-white;
   }
 </style>
