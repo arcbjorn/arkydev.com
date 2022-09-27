@@ -5,4 +5,8 @@
   export const csr = true;
 </script>
 
+<svelte:head>
+  <title>Arky Development</title>
+</svelte:head>
+
 <slot />
