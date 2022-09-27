@@ -1,8 +1,13 @@
+<script lang="ts">
+  export let width: string = '50';
+  export let height: string = '75';
+</script>
+
 <svg
   version="1.0"
   xmlns="http://www.w3.org/2000/svg"
-  width="50"
-  height="75"
+  {width}
+  {height}
   viewBox="0 0 974.000000 1580.000000"
   preserveAspectRatio="xMidYMid meet"
 >

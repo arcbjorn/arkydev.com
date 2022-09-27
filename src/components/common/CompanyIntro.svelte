@@ -2,7 +2,7 @@
   import { t } from '$l18n';
   import { EToken } from '$l18n/enums';
   import { ECompanyName } from '$components/enums';
-  import Logo from '$components/main/Logo.svelte';
+  import Logo from '$components/common/Logo.svelte';
 </script>
 
 <div class="flex p-8 border-2 bg-white border-black">
