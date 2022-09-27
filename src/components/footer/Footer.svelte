@@ -12,12 +12,12 @@
 <footer>
   <div class="flex justify-around items-center flex-wrap border-b-2 py-12">
     <div class="flex">
-      <div class="flex p-4">
+      <a href="/" class="flex p-4">
         <Logo width={'30'} height={'45'} />
         <div class="flex flex-col pl-4 gap-y-2 max-w-fit">
           <span class="text-sm font-semibold">{ECompanyName.FULL}</span>
         </div>
-      </div>
+      </a>
 
       <div class="flex flex-col p-4 gap-y-1">
         <a class="text-xs" href="/"> {$t(EToken.PRIVACY)}</a>
