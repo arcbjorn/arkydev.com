@@ -1,10 +1,10 @@
 <script lang="ts">
-  import CompanyIntro from './CompanyIntro.svelte';
-  import Description from './Description.svelte';
+  import CompanyIntro from '$components/common/CompanyIntro.svelte';
+  import Description from '$components/main/Description.svelte';
 </script>
 
 <main>
-  <div class="flex justify-around gap-4 flex-wrap">
+  <div class="flex justify-evenly gap-4 flex-wrap">
     <div class="self-center hidden lg:block">
       <CompanyIntro />
     </div>
@@ -14,7 +14,7 @@
 
 <style>
   main {
-    @apply grow w-full flex flex-col justify-around border-b-2 bg-white;
-    background: url(/core.svg) no-repeat center;
+    @apply grow w-full flex flex-col justify-center border-b-2 bg-white;
+    background: url(/main_bg.svg) no-repeat center;
   }
 </style>
