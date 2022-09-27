@@ -33,7 +33,7 @@ const translations: TTranslations = {
     [EToken.COMPLETE_ACTION]: 'Launch big idea',
 
     [EToken.ABOUT_US]:
-      'We are the team of seasoned engineers & designers, dedicated to make the world a better place with help of technologies:',
+      'We are a team of seasoned engineers & designers, dedicated to make the world a better place with help of technologies:',
 
     [EToken.PARTNERS]: 'Greatful to have opportunity to work with:',
 
