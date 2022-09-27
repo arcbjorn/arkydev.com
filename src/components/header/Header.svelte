@@ -11,14 +11,14 @@
     <Navigation />
   </div>
 
-  <div class="hidden md:flex lg:hidden flex-col">
+  <a href="/" class="hidden md:flex lg:hidden flex-col">
     <span class="text-md font-bold">{ECompanyName.FULL}</span>
     <span class="text-xs">{$t(EToken.SLOGAN)}</span>
-  </div>
+  </a>
 
-  <div class="md:hidden text-lg font-bold">{ECompanyName.SHORT}</div>
+  <a href="/" class="md:hidden text-lg font-bold">{ECompanyName.SHORT}</a>
 
-  <div class="lg:hidden">MobileNavigation</div>
+  <div class="invisible lg:hidden">MobileNavigation</div>
 </header>
 
 <style>
