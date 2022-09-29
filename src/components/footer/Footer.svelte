@@ -1,7 +1,7 @@
 <script lang="ts">
   import { EToken } from '$l18n/enums';
   import { t } from '$l18n';
-  import { ECompanyName } from '$components/enums';
+  import { ECompanyEmail, ECompanyName } from '$components/enums';
   import Logo from '$components/common/Logo.svelte';
   import MailIcon from '$components/footer/MailIcon.svelte';
   import TelegramIcon from '$components/footer/TelegramIcon.svelte';
@@ -29,7 +29,8 @@
       </div>
     </div>
     <div class="hidden sm:flex p-6 gap-4">
-      <a href="mailto:arcbjorn@proton.me"> <MailIcon /> </a>
+      <a class="link" href={'mailto:' + ECompanyEmail.HELLO}> <MailIcon /> </a>
+
       <a href="https://t.me/arcbjorn"> <TelegramIcon /> </a>
     </div>
   </div>
