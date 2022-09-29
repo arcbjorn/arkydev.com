@@ -1,4 +1,4 @@
-import{S as Q,i as X,s as z,k as f,q as m,l as u,m as P,r as c,h as p,n as V,b as y,L as a,A as G,a as H,v as O,Q as J,c as T,w as q,x as N,f as C,t as F,y as M,M as K}from"../../../chunks/index-687e63cb.js";import{E as U,a as j,H as W,F as Y,t as Z}from"../../../chunks/Footer-5d066a4a.js";function ee(b){let s,e,r,l,v,d=U.EXTENDED+"",g,i,_,t,o,$,x,A,E,L,B,D,k,w,S,I;return{c(){s=f("main"),e=f("div"),r=m("Oleg Luganskiy"),l=f("br"),v=m(`
+import{S as Q,i as X,s as z,k as f,q as m,l as u,m as P,r as c,h as p,n as V,b as y,L as a,A as G,a as H,v as O,Q as J,c as T,w as q,x as N,f as C,t as F,y as M,M as K}from"../../../chunks/index-687e63cb.js";import{E as U,a as j,H as W,F as Y,t as Z}from"../../../chunks/Footer-248f2457.js";function ee(b){let s,e,r,l,v,d=U.EXTENDED+"",g,i,_,t,o,$,x,A,E,L,B,D,k,w,S,I;return{c(){s=f("main"),e=f("div"),r=m("Oleg Luganskiy"),l=f("br"),v=m(`
     DBA. "`),g=m(d),i=m('"'),_=f("br"),t=m(`
     \xA0`),o=f("br"),$=m(`
     Registered ID - 316366767`),x=f("br"),A=m(`
