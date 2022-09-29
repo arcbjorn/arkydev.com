@@ -34,6 +34,11 @@ export enum EToken {
   CONTACT_ACTION = 'contact.action',
   CONTACT_LINKS = 'contact.links',
 
+  LEGAL = 'legal',
   PRIVACY = 'privacy',
-  TERMS = 'terms'
+  TERMS = 'terms',
+
+  LEGAL_SHORT = 'legal.short',
+  PRIVACY_SHORT = 'privacy.short',
+  TERMS_SHORT = 'terms.short'
 }

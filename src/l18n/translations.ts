@@ -40,8 +40,13 @@ const translations: TTranslations = {
     [EToken.CONTACT_ACTION]: 'Let`s do it!',
     [EToken.CONTACT_LINKS]: 'Contact us via',
 
+    [EToken.LEGAL]: 'Legal Mentions',
     [EToken.PRIVACY]: 'Privacy Policy',
-    [EToken.TERMS]: 'Terms of Usage'
+    [EToken.TERMS]: 'Terms of Usage',
+
+    [EToken.LEGAL_SHORT]: 'Legal',
+    [EToken.PRIVACY_SHORT]: 'Privacy',
+    [EToken.TERMS_SHORT]: 'Terms'
   }
 };
 
