@@ -1,6 +1,7 @@
 <script lang="ts">
   import { EToken } from '$l18n/enums';
   import { t } from '$l18n';
+  import { ECompanyEmail } from '$components/enums';
 </script>
 
 <div id={EToken.CONTACT} class="contact">
@@ -8,7 +9,7 @@
   <div class="block shadow-md shadow-green-500">
     {$t(EToken.CONTACT_LINKS)}
     <span class="links">
-      <a class="link" href="mailto:arcbjorn@proton.me"> email </a>
+      <a class="link" href={'mailto:' + ECompanyEmail.HELLO}> email </a>
       &
       <a class="link" href="https://t.me/arcbjorn"> telegram </a>
     </span>
