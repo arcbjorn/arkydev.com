@@ -1,0 +1,14 @@
+<script lang="ts">
+  import { fly } from 'svelte/transition';
+  export let pathname = '';
+</script>
+
+{#key pathname}
+  <div
+    in:fly={{ x: -5, duration: 500, delay: 500 }}
+    out:fly={{ x: 5, duration: 500 }}
+    class="h-full w-full"
+  >
+    <slot />
+  </div>
+{/key}
