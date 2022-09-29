@@ -4,7 +4,7 @@
   import { EToken } from '$l18n/enums';
 </script>
 
-<div class="flex justify-center py-8 border-b-2 bg-white">
+<div class="flex justify-center p-8 md:p-0 border-b-2 bg-white">
   <div class="prose">
     <h1>{$t(EToken.TERMS)}</h1>
     <p>
