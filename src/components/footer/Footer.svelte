@@ -12,16 +12,20 @@
 <footer>
   <div class="flex justify-around items-center flex-wrap border-b-2 py-12">
     <div class="flex">
-      <a href="/" class="flex p-4">
-        <Logo width={'30'} height={'45'} />
-        <div class="flex flex-col pl-4 gap-y-2 max-w-fit">
-          <span class="text-sm font-semibold">{ECompanyName.FULL}</span>
-        </div>
-      </a>
+      <div class="flex flex-col">
+        <a href="/" class="flex p-4">
+          <Logo width={'30'} height={'45'} />
+          <div class="flex flex-wrap pl-4 gap-y-2 max-w-fit">
+            <span class="text-sm font-semibold">{ECompanyName.FULL}</span>
+          </div>
+        </a>
+        <p class="text-xs pl-4">Legal ID: 316366767</p>
+      </div>
 
       <div class="flex flex-col p-4 gap-y-1">
-        <a class="text-xs" href="/"> {$t(EToken.PRIVACY)}</a>
-        <a class="text-xs" href="/"> {$t(EToken.TERMS)}</a>
+        <a class="text-xs" href={EToken.LEGAL}> {$t(EToken.LEGAL)}</a>
+        <a class="text-xs" href={EToken.PRIVACY}> {$t(EToken.PRIVACY)}</a>
+        <a class="text-xs" href={EToken.TERMS}> {$t(EToken.TERMS)}</a>
       </div>
     </div>
     <div class="hidden sm:flex p-6 gap-4">
@@ -29,13 +33,10 @@
       <a href="https://t.me/arcbjorn"> <TelegramIcon /> </a>
     </div>
   </div>
-  <div class="flex flex-col items-center gap-4 p-4 text-xs">
-    <span class="text-center">
-      Oleg Luganskiy DBA. {ECompanyName.EXTENDED}, ID - 316366767, Legal Address - 19 Shartava
-      Avenue, Rustavi, Georgia
-    </span>
-    <span>{currentYear} ASDC. All rights reserved.</span>
-  </div>
+  <span class="text-center p-4 text-xs">
+    © Copyright ©{currentYear}
+    {ECompanyName.EXTENDED}. All rights reserved.
+  </span>
 </footer>
 
 <style>
