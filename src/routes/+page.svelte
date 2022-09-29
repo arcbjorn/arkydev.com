@@ -6,7 +6,12 @@
   import Footer from '$components/footer/Footer.svelte';
   import Partners from '$components/partners/Partners.svelte';
   import Technologies from '$components/technologies/Technologies.svelte';
+  import { ECompanyName } from '$components/enums';
 </script>
+
+<svelte:head>
+  <title>{ECompanyName.FULL}</title>
+</svelte:head>
 
 <div class="flex flex-col h-full">
   <Header />
