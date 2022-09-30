@@ -3,7 +3,7 @@
   import { EToken } from '$l18n/enums';
   import Navigation from '$components/header/Navigation.svelte';
   import { ECompanyName } from '$components/enums';
-  import MobileNavigation from './MobileNavigation.svelte';
+  import MobileNavigation from '$components/header/MobileNavigation.svelte';
 
   export let isLegalPage: boolean = false;
 </script>
