@@ -3,6 +3,7 @@
   import { EToken } from '$l18n/enums';
   import Navigation from '$components/header/Navigation.svelte';
   import { ECompanyName } from '$components/enums';
+  import MobileNavigation from './MobileNavigation.svelte';
 
   export let isLegalPage: boolean = false;
 </script>
@@ -14,12 +15,14 @@
       <span class="text-xs">{$t(EToken.SLOGAN)}</span>
     </a>
   {:else}
-    <a href="/" class="hidden md:flex lg:hidden flex-col">
+    <a href="/" class="hidden xs:flex lg:hidden flex-col">
       <span class="text-md font-bold">{ECompanyName.FULL}</span>
       <span class="text-xs">{$t(EToken.SLOGAN)}</span>
     </a>
 
-    <a href="/" class="md:hidden text-lg font-bold">{ECompanyName.SHORT}</a>
+    <a href="/" class="xs:hidden flex-col">
+      <div class="text-base font-bold">{ECompanyName.FULL}</div>
+    </a>
   {/if}
 
   {#if isLegalPage}
@@ -30,7 +33,9 @@
       <Navigation />
     </div>
 
-    <div class="invisible lg:hidden">MobileNavigation</div>
+    <div class="lg:hidden">
+      <MobileNavigation />
+    </div>
   {/if}
 </header>
 
@@ -51,6 +56,6 @@
   }
 
   header {
-    @apply sticky top-0 z-30 w-full py-8 flex justify-around items-center border-b-2 bg-white;
+    @apply sticky top-0 z-30 w-full py-8 flex justify-evenly 2xs:justify-around items-center border-b-2 bg-white;
   }
 </style>
