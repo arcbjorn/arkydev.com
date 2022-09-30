@@ -168,8 +168,8 @@
     <h2>Governing Law</h2>
     <p>
       This Agreement (and any further rules, policies, or guidelines incorporated by reference)
-      shall be governed and construed in accordance with the laws of the State of Texas, without
-      giving effect to any principles of conflicts of law.
+      shall be governed and construed in accordance with the laws of Georgia, without giving effect
+      to any principles of conflicts of law.
     </p>
     <h2>Changes To This Agreement</h2>
     <p>
