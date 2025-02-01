@@ -7,8 +7,8 @@
   import Header from '$components/header/Header.svelte';
   import Contact from '$components/contact/Contact.svelte';
   import Footer from '$components/footer/Footer.svelte';
-  import Partners from '$components/partners/Partners.svelte';
   import Technologies from '$components/technologies/Technologies.svelte';
+  import Matrix from '$components/matrix/Matrix.svelte';
 </script>
 
 <svelte:head>
@@ -22,6 +22,6 @@
 
 <Services />
 <Technologies />
-<Partners />
+<Matrix />
 <Contact />
 <Footer />

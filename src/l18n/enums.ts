@@ -31,6 +31,7 @@ export enum EToken {
   ABOUT_US = 'about.description',
 
   PARTNERS = 'partners',
+  MATRIX = 'matrix',
 
   CONTACT_ACTION = 'contact.action',
   CONTACT_LINKS = 'contact.links',
@@ -54,4 +55,5 @@ export enum EToken {
   TECH_WEB = 'technologies.web',
   TECH_WEB_DESC = 'technologies.web.description',
   COMPANY_DEVELOPMENT = 'company.development',
+  COPYRIGHT = 'copyright'
 }
