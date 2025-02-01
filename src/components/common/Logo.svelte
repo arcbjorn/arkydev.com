@@ -13,7 +13,7 @@
 >
   <g
     transform="translate(0.000000,1580.000000) scale(0.100000,-0.100000)"
-    fill="#000000"
+    class="fill-black dark:fill-white"
     stroke="none"
   >
     <path

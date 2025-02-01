@@ -9,12 +9,15 @@
   export let isLegalPage: boolean = false;
 </script>
 
-<header class="dark:bg-gray-900 dark:text-white">
+<header class="dark:bg-stone-950 dark:text-white">
   {#if isLegalPage}
-    <a href="/" class="flex flex-col">
-      <span class="text-md font-bold">{ECompanyName.FULL}</span>
-      <span class="text-xs">{$t(EToken.SLOGAN)}</span>
-    </a>
+    <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-8">
+      <a href="/" class="flex flex-col">
+        <span class="text-md font-bold">{ECompanyName.FULL}</span>
+        <span class="text-xs">{$t(EToken.SLOGAN)}</span>
+      </a>
+      <ThemeToggle />
+    </div>
   {:else}
     <a href="/" class="hidden xs:flex lg:hidden flex-col">
       <span class="text-md font-bold">{ECompanyName.FULL}</span>
@@ -46,7 +49,7 @@
     <button
       type="button"
       title="Back"
-      class="fixed z-90 bottom-10 left-8 flex justify-center items-center border-2 border-black bg-white w-16 h-16 drop-shadow-lg hover:text-white text-5xl hover:bg-black"
+      class="fixed z-90 bottom-10 left-8 flex justify-center items-center border-2 border-black dark:border-gray-300 bg-white dark:bg-stone-950 w-16 h-16 drop-shadow-lg hover:text-white dark:text-white text-5xl hover:bg-black dark:hover:bg-white dark:hover:text-black transition-colors duration-300"
       >&#8592;</button
     >
   </a>
@@ -58,6 +61,6 @@
   }
 
   header {
-    @apply sticky top-0 z-30 w-full py-8 flex justify-evenly 2xs:justify-around items-center border-b-2 bg-white dark:border-gray-700;
+    @apply sticky top-0 z-30 w-full py-8 flex justify-evenly 2xs:justify-around items-center border-b-2 bg-white dark:border-stone-700;
   }
 </style>

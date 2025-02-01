@@ -7,6 +7,7 @@
   viewBox="0 0 500 500"
   style="enable-background:new 0 0 50 50;"
   xml:space="preserve"
+  class="fill-black dark:fill-white"
 >
   <g>
     <g>

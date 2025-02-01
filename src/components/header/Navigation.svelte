@@ -15,7 +15,7 @@
 
 <style>
   .option {
-    @apply px-4 sm:px-8;
+    @apply px-4 sm:px-8 dark:text-white;
   }
 
   .option:hover {
@@ -24,18 +24,18 @@
     background:
       linear-gradient(
           to bottom,
-          black 1.2px,
+          currentColor 1.2px,
           transparent 1.2px,
           transparent calc(100% - 1.2px),
-          black calc(100% - 1.2px)
+          currentColor calc(100% - 1.2px)
         )
         no-repeat,
       linear-gradient(
           to left,
-          black 1.2px,
+          currentColor 1.2px,
           transparent 1.2px,
           transparent calc(100% - 1.2px),
-          black calc(100% - 1.2px)
+          currentColor calc(100% - 1.2px)
         )
         no-repeat;
 

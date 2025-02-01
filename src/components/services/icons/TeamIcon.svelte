@@ -6,6 +6,7 @@
   height="75"
   viewBox="0 0 550 550"
   preserveAspectRatio="xMidYMid meet"
+  class="fill-black dark:fill-white"
 >
   <g>
     <circle cx="245" cy="39.483" r="39.483" />

@@ -4,8 +4,8 @@
   import { EToken } from '$l18n/enums';
 </script>
 
-<div class="flex justify-center p-8 border-b-2 bg-white">
-  <div class="prose">
+<div class="flex justify-center p-8 border-b-2 bg-white dark:bg-stone-950 dark:border-gray-700">
+  <div class="prose dark:prose-invert">
     <h1>{$t(EToken.TERMS)}</h1>
     <p>
       <b>
@@ -53,8 +53,8 @@
     </p>
     <h2>Fees and Services</h2>
     <p>
-      All references on the Sites and Applications or in this Membership Terms to “$” and “dollars”
-      are referring to United States Dollars (USD).
+      All references on the Sites and Applications or in this Membership Terms to "$" and "$" are
+      referring to United States Dollars (USD).
     </p>
     <h2>Ongoing Monthly Membership</h2>
     <p>
@@ -92,7 +92,7 @@
     </p>
     <h2>Use of Account</h2>
     <p>
-      Each purchase of a paid {ECompanyName.ABBREVIATION} account (“Subscription”) is licensed for use
+      Each purchase of a paid {ECompanyName.ABBREVIATION} account ("Subscription") is licensed for use
       by one company or organization only. If you would like to use a Subscriptions account across multiple
       locations, you can do so but sharing accounts with other individuals or organizations outside the
       company or organization is strictly prohibited. You may not authorize others to use your account,

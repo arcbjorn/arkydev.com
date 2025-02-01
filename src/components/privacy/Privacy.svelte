@@ -4,8 +4,8 @@
   import { EToken } from '$l18n/enums';
 </script>
 
-<div class="flex justify-center p-8 border-b-2 bg-white">
-  <div class="prose">
+<div class="flex justify-center p-8 border-b-2 bg-white dark:bg-stone-950 dark:border-gray-700">
+  <div class="prose dark:prose-invert">
     <h1>{$t(EToken.PRIVACY)}</h1>
 
     <p>
@@ -150,7 +150,7 @@
       services and your exposure to our online advertisements. We may also use these technologies to
       monitor traffic, improve the products and services, and make them easier and/or relevant for
       your use. For example, we may recommend gaming events similar to the ones you have shown
-      interest in or display advertisements that you haven’t already seen.
+      interest in or display advertisements that you haven't already seen.
     </p>
 
     <h3>What Kinds of Cookies Do We Use?</h3>
@@ -279,7 +279,7 @@
       content. If you opt-in to receive joint or co-branded Partner content, or to participate in
       gaming events or contests provided by Partners, we may provide your information to these third
       parties & partners for use in marketing and in designing or providing their own services and
-      to send you information about their products or services. If you don’t want us to send your
+      to send you information about their products or services. If you don't want us to send your
       information to the third party, you should not sign up for this joint or co- branded content.
       You should contact the other third party directly who may already be sending you messages or
       using your Personal Data in order to request that these communications and data use practices
@@ -362,7 +362,7 @@
       On most web browsers, you will find a “help” section on the toolbar. Please refer to this
       section for information on how to receive a notification when you are receiving a new cookie
       and how to control cookies, including turn them off. Please see the links below for guidance
-      on how to modify your web browser’s settings on the most popular browsers:
+      on how to modify your web browser's settings on the most popular browsers:
     </p>
     <ul>
       <li>
@@ -396,12 +396,12 @@
     <p>
       To find out more about cookies and similar technologies, including how to see what cookies and
       similar technologies have been set and how to manage and delete them, visit
-      www.allaboutcookies.org, and/or the Digital Advertising Alliance’s (DAA) online resources at
+      www.allaboutcookies.org, and/or the Digital Advertising Alliance's (DAA) online resources at
       <a href="http://youradchoices.com/control">http://youradchoices.com/control</a> , and/or the
-      Network Advertising Initiative’s (NAI) online resources at
+      Network Advertising Initiative's (NAI) online resources at
       <a href="http://www.networkadvertising.org">http://www.networkadvertising.org</a> , and follow
       the opt-out instructions there, or if located in the European Union, visit the European Interactive
-      Digital Advertising Alliance’s (EDAA) Your Online Choices opt-out tool at www.youronlinechoices.com.
+      Digital Advertising Alliance's (EDAA) Your Online Choices opt-out tool at www.youronlinechoices.com.
     </p>
 
     <p>
@@ -435,7 +435,7 @@
       services may use cookies, JavaScript, web beacons (including Pixel Tags or clear GIFs), and
       other tracking technologies to measure the effectiveness of their ads and to personalize
       advertising content to you. These third-party cookies and other technologies are governed by
-      each third party’s specific privacy policy, not this one.
+      each third party's specific privacy policy, not this one.
     </p>
     <h3>Modifying personal information</h3>
 
@@ -545,7 +545,7 @@
         we shared your Personal Data so that you can contact them directly.
       </li>
       <li>
-        Right to restrict processing: You may ask us to restrict or ‘block’ the processing of your
+        Right to restrict processing: You may ask us to restrict or 'block' the processing of your
         Personal Data in certain circumstances, such as where you contest the accuracy of that
         Personal Data or object to us processing it. We will tell you before we lift any
         restrictions on processing. If we have shared your Personal Data with others, we will tell
@@ -564,7 +564,7 @@
         will do so if we are processing your Personal Data for the Services, for direct marketing,
         or otherwise. However, if we are relying on a legitimate interest to process your Personal
         Data and we demonstrate compelling legitimate grounds for the processing we may continue; or
-        you may exercise your rights by contacting us as indicated under “Contact Us”. Note you will
+        you may exercise your rights by contacting us as indicated under "Contact Us". Note you will
         be asked to verify your identity when submitting a request.
       </li>
       <li>
@@ -658,7 +658,7 @@
 
     <p>
       We may change this Privacy Policy at any time. We will post all changes to this Privacy Policy
-      on this page and will indicate at the top of the page the modified policy’s effective date. We
+      on this page and will indicate at the top of the page the modified policy's effective date. We
       therefore encourage you to refer to this page on an ongoing basis so that you are aware of our
       current privacy policy. If required by the applicable law, we will notify you of the changes.
       By continuing to use the Sites and/or the Services or providing us with information following

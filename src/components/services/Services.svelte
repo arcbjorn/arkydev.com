@@ -63,6 +63,6 @@
 
 <style>
   .services {
-    @apply w-full p-8 flex items-start flex-wrap border-b-2 bg-white;
+    @apply w-full p-8 flex items-start flex-wrap border-b-2 bg-white dark:bg-stone-950 dark:text-white dark:border-gray-700;
   }
 </style>

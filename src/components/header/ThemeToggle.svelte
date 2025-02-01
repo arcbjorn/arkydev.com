@@ -6,7 +6,10 @@
   };
 </script>
 
-<button on:click={toggleTheme} class="px-4 sm:px-8">
+<button
+  on:click={toggleTheme}
+  class="px-4 sm:px-8 text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+>
   {#if $theme === 'light'}
     <svg
       xmlns="http://www.w3.org/2000/svg"

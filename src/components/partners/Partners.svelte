@@ -4,19 +4,21 @@
   import { PARTNERS } from '../../constants';
 </script>
 
-<div class="flex flex-col py-12 gap-y-12 border-b-2">
-  <div class="self-center text-center sm:text-2xl px-6">
+<div
+  class="flex flex-col py-12 gap-y-12 border-b-2 bg-white dark:bg-stone-950 dark:border-gray-700"
+>
+  <div class="self-center text-center sm:text-2xl px-6 dark:text-white">
     {$t(EToken.PARTNERS)}
   </div>
   <div class="partners">
     <div class="line">
       {#each PARTNERS as { name }}
-        <div class="company px-12">{name}</div>
+        <div class="company px-12 dark:text-white">{name}</div>
       {/each}
     </div>
     <div class="line">
       {#each PARTNERS as { name }}
-        <div class="company px-12">{name}</div>
+        <div class="company px-12 dark:text-white">{name}</div>
       {/each}
     </div>
   </div>

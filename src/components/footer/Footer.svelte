@@ -9,8 +9,8 @@
   const currentYear = new Date().getFullYear();
 </script>
 
-<footer>
-  <div class="flex justify-around items-center flex-wrap border-b-2 py-12">
+<footer class="dark:bg-stone-950 dark:text-white">
+  <div class="flex justify-around items-center flex-wrap border-b-2 dark:border-gray-700 py-12">
     <div class="flex">
       <div class="flex flex-col">
         <a href="/" class="flex p-4">
@@ -23,25 +23,34 @@
       </div>
 
       <div class="flex flex-col p-4 gap-y-1">
-        <a class="text-xs" href={EToken.LEGAL}> {$t(EToken.LEGAL)}</a>
-        <a class="text-xs" href={EToken.PRIVACY}> {$t(EToken.PRIVACY)}</a>
-        <a class="text-xs" href={EToken.TERMS}> {$t(EToken.TERMS)}</a>
+        <a class="text-xs hover:text-gray-600 dark:hover:text-gray-300" href={EToken.LEGAL}
+          >{$t(EToken.LEGAL)}</a
+        >
+        <a class="text-xs hover:text-gray-600 dark:hover:text-gray-300" href={EToken.PRIVACY}
+          >{$t(EToken.PRIVACY)}</a
+        >
+        <a class="text-xs hover:text-gray-600 dark:hover:text-gray-300" href={EToken.TERMS}
+          >{$t(EToken.TERMS)}</a
+        >
       </div>
     </div>
     <div class="hidden sm:flex p-6 gap-4">
-      <a class="link" href={'mailto:' + ECompanyEmail.HELLO}> <MailIcon /> </a>
-
-      <a href="https://t.me/arcbjorn"> <TelegramIcon /> </a>
+      <a
+        class="link hover:text-gray-600 dark:hover:text-gray-300"
+        href={'mailto:' + ECompanyEmail.HELLO}><MailIcon /></a
+      >
+      <a class="hover:text-gray-600 dark:hover:text-gray-300" href="https://t.me/arcbjorn"
+        ><TelegramIcon /></a
+      >
     </div>
   </div>
-  <span class="text-center p-4 text-xs">
-    © Copyright ©{currentYear}
-    {ECompanyName.EXTENDED}. All rights reserved.
-  </span>
+  <span class="text-center p-4 text-xs"
+    >{currentYear} {ECompanyName.EXTENDED}. All rights reserved.</span
+  >
 </footer>
 
 <style>
   footer {
-    @apply w-full flex flex-col border-b-2 bg-white bg-cover;
+    @apply w-full flex flex-col border-b-2 bg-white dark:bg-stone-950 bg-cover;
   }
 </style>

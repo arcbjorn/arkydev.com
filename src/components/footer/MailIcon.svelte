@@ -7,6 +7,7 @@
   viewBox="0 0 474 474"
   style="enable-background:new 0 0 474 474;"
   xml:space="preserve"
+  class="fill-black dark:fill-white"
 >
   <g>
     <path

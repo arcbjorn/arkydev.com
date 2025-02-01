@@ -5,7 +5,9 @@
   import Logo from '$components/common/Logo.svelte';
 </script>
 
-<div class="flex p-8 border-2 bg-white border-black">
+<div
+  class="flex p-8 border-2 bg-white dark:bg-stone-950 dark:text-white border-black dark:border-gray-700"
+>
   <Logo />
   <div class="flex flex-col pl-4 gap-y-2">
     <span class="text-2xl sm:text-4xl">{ECompanyName.FULL}</span>
