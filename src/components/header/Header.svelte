@@ -4,11 +4,12 @@
   import Navigation from '$components/header/Navigation.svelte';
   import { ECompanyName } from '$components/enums';
   import MobileNavigation from '$components/header/MobileNavigation.svelte';
+  import ThemeToggle from '$components/header/ThemeToggle.svelte';
 
   export let isLegalPage: boolean = false;
 </script>
 
-<header>
+<header class="dark:bg-gray-900 dark:text-white">
   {#if isLegalPage}
     <a href="/" class="flex flex-col">
       <span class="text-md font-bold">{ECompanyName.FULL}</span>
@@ -33,7 +34,8 @@
       <Navigation />
     </div>
 
-    <div class="lg:hidden">
+    <div class="lg:hidden flex items-center">
+      <ThemeToggle />
       <MobileNavigation />
     </div>
   {/if}
@@ -56,6 +58,6 @@
   }
 
   header {
-    @apply sticky top-0 z-30 w-full py-8 flex justify-evenly 2xs:justify-around items-center border-b-2 bg-white;
+    @apply sticky top-0 z-30 w-full py-8 flex justify-evenly 2xs:justify-around items-center border-b-2 bg-white dark:border-gray-700;
   }
 </style>
