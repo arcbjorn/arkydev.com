@@ -66,6 +66,6 @@
   }
 
   header {
-    @apply sticky top-0 z-30 w-full py-8 flex justify-evenly 2xs:justify-around items-center border-b-2 bg-white dark:border-stone-700;
+    @apply sticky top-0 z-30 w-full py-8 flex justify-evenly 2xs:justify-around items-center border-b-2 bg-white dark:border-gray-700;
   }
 </style>

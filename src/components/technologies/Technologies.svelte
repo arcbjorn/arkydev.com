@@ -11,7 +11,7 @@
   <CyberBackground className="absolute inset-0 w-full h-full object-cover" />
   <div class="block relative mb-8">{$t(EToken.ABOUT_US)}</div>
 
-  <div class="flex gap-4 flex-wrap relative">
+  <div class="flex gap-4 flex-wrap relative justify-center">
     {#each technologies as name}
       <div class="block technology">{$t(name)}</div>
     {/each}

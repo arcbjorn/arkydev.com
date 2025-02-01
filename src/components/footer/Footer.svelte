@@ -46,9 +46,7 @@
       >
     </div>
   </div>
-  <span class="text-center p-4 text-xs"
-    >{currentYear} {ECompanyName.EXTENDED}. All rights reserved.</span
-  >
+  <span class="text-center p-4 text-xs">{currentYear} {$t(EToken.COPYRIGHT)}</span>
 </footer>
 
 <style>
