@@ -3,6 +3,10 @@ import { EToken } from '$l18n/enums';
 
 export const TECHNOLOGIES: Technology[] = [
   {
+    name: EToken.TECH_AI,
+    description: EToken.TECH_AI_DESC
+  },
+  {
     name: EToken.TECH_DISTRIBUTED,
     description: EToken.TECH_DISTRIBUTED_DESC
   },

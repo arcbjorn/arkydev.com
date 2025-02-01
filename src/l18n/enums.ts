@@ -44,6 +44,8 @@ export enum EToken {
   PRIVACY_SHORT = 'privacy.short',
   TERMS_SHORT = 'terms.short',
 
+  TECH_AI = 'technologies.ai',
+  TECH_AI_DESC = 'technologies.ai.description',
   TECH_DISTRIBUTED = 'technologies.distributed',
   TECH_DISTRIBUTED_DESC = 'technologies.distributed.description',
   TECH_BLOCKCHAIN = 'technologies.blockchain',
