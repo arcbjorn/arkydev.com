@@ -16,7 +16,9 @@
         <a href="/" class="flex p-4">
           <Logo width={'30'} height={'45'} />
           <div class="flex flex-wrap pl-4 gap-y-2 max-w-fit">
-            <span class="text-sm font-semibold">{ECompanyName.FULL}</span>
+            <span class="text-sm font-semibold"
+              >{ECompanyName.SHORT} {$t(EToken.COMPANY_DEVELOPMENT)}</span
+            >
           </div>
         </a>
         <p class="text-xs pl-4">Legal ID: 316366767</p>

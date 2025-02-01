@@ -1,5 +1,6 @@
 export enum ELanguage {
-  EN = 'en'
+  EN = 'en',
+  JA = 'ja'
 }
 
 export enum EToken {
@@ -40,5 +41,17 @@ export enum EToken {
 
   LEGAL_SHORT = 'legal.short',
   PRIVACY_SHORT = 'privacy.short',
-  TERMS_SHORT = 'terms.short'
+  TERMS_SHORT = 'terms.short',
+
+  TECH_DISTRIBUTED = 'technologies.distributed',
+  TECH_DISTRIBUTED_DESC = 'technologies.distributed.description',
+  TECH_BLOCKCHAIN = 'technologies.blockchain',
+  TECH_BLOCKCHAIN_DESC = 'technologies.blockchain.description',
+  TECH_DESKTOP = 'technologies.desktop',
+  TECH_DESKTOP_DESC = 'technologies.desktop.description',
+  TECH_MOBILE = 'technologies.mobile',
+  TECH_MOBILE_DESC = 'technologies.mobile.description',
+  TECH_WEB = 'technologies.web',
+  TECH_WEB_DESC = 'technologies.web.description',
+  COMPANY_DEVELOPMENT = 'company.development',
 }

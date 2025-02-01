@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { t } from '$l18n';
+  import { EToken } from '$l18n/enums';
+  import { ECompanyName } from '$components/enums';
   import Main from '$components/main/Main.svelte';
   import Services from '$components/services/Services.svelte';
   import Header from '$components/header/Header.svelte';
@@ -6,11 +9,10 @@
   import Footer from '$components/footer/Footer.svelte';
   import Partners from '$components/partners/Partners.svelte';
   import Technologies from '$components/technologies/Technologies.svelte';
-  import { ECompanyName } from '$components/enums';
 </script>
 
 <svelte:head>
-  <title>{ECompanyName.FULL}</title>
+  <title>{ECompanyName.SHORT} {$t(EToken.COMPANY_DEVELOPMENT)}</title>
 </svelte:head>
 
 <div class="flex flex-col h-full">

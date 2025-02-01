@@ -10,7 +10,7 @@
 >
   <Logo />
   <div class="flex flex-col pl-4 gap-y-2">
-    <span class="text-2xl sm:text-4xl">{ECompanyName.FULL}</span>
+    <span class="text-2xl sm:text-4xl">{ECompanyName.SHORT} {$t(EToken.COMPANY_DEVELOPMENT)}</span>
     <span class="text-md sm:text-xl">{$t(EToken.SLOGAN)}</span>
   </div>
 </div>

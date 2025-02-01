@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { SvelteComponent, ComponentType, ComponentProps } from 'svelte';
   import { EToken } from '$l18n/enums';
   import { t } from '$l18n';
+  import { SERVICES } from '$constants';
 
   import CompleteSolutionIcon from '$components/services/icons/CompleteSolutionIcon.svelte';
   import ConsultingIcon from '$components/services/icons/ConsultingIcon.svelte';
@@ -10,41 +10,20 @@
 
   import Service from '$components/services/Service.svelte';
 
-  interface IServiceBlock {
-    icon: ComponentType<SvelteComponent>;
-    heading: string;
-    description: string;
-    actionText: string;
-    completeSolution?: boolean;
-  }
+  const icons = {
+    ConsultingIcon,
+    SystemArchitectureIcon,
+    TeamIcon,
+    CompleteSolutionIcon
+  };
 
-  const services: IServiceBlock[] = [
-    {
-      icon: ConsultingIcon,
-      heading: $t(EToken.CONSULTING),
-      description: $t(EToken.CONSULTING_DESC),
-      actionText: $t(EToken.CONSULTING_ACTION)
-    },
-    {
-      icon: SystemArchitectureIcon,
-      heading: $t(EToken.ARCHITECTURE),
-      description: $t(EToken.ARCHITECTURE_DESC),
-      actionText: $t(EToken.ARCHITECTURE_ACTION)
-    },
-    {
-      icon: TeamIcon,
-      heading: $t(EToken.TEAM),
-      description: $t(EToken.TEAM_DESC),
-      actionText: $t(EToken.TEAM_ACTION)
-    },
-    {
-      icon: CompleteSolutionIcon,
-      heading: $t(EToken.COMPLETE),
-      description: $t(EToken.COMPLETE_DESC),
-      actionText: $t(EToken.COMPLETE_ACTION),
-      completeSolution: true
-    }
-  ];
+  $: services = SERVICES.map(service => ({
+    icon: icons[service.icon as keyof typeof icons],
+    heading: $t(service.name),
+    description: $t(service.description),
+    actionText: $t(service.action),
+    completeSolution: service.completeSolution
+  }));
 </script>
 
 <div id={EToken.SERVICES} class="services">

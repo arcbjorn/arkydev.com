@@ -1,27 +1,26 @@
-import type { Technology, Partner } from '../types';
+import type { Technology, Partner, ServiceBlock } from '$types';
 import { EToken } from '$l18n/enums';
-import { t } from '$l18n';
 
 export const TECHNOLOGIES: Technology[] = [
   {
-    name: 'Distributed systems',
-    description: 'Building scalable distributed applications'
+    name: EToken.TECH_DISTRIBUTED,
+    description: EToken.TECH_DISTRIBUTED_DESC
   },
   {
-    name: 'Blockchain solutions',
-    description: 'Web3 and blockchain development'
+    name: EToken.TECH_BLOCKCHAIN,
+    description: EToken.TECH_BLOCKCHAIN_DESC
   },
   {
-    name: 'Cross-platform Desktop apps',
-    description: 'Native desktop applications'
+    name: EToken.TECH_DESKTOP,
+    description: EToken.TECH_DESKTOP_DESC
   },
   {
-    name: 'Cross-platform Mobile apps',
-    description: 'Native mobile applications'
+    name: EToken.TECH_MOBILE,
+    description: EToken.TECH_MOBILE_DESC
   },
   {
-    name: 'Full-stack Web solutions',
-    description: 'End-to-end web applications'
+    name: EToken.TECH_WEB,
+    description: EToken.TECH_WEB_DESC
   }
 ];
 
@@ -33,4 +32,32 @@ export const PARTNERS: Partner[] = [
   'Hitachi',
   'Microsoft',
   'TD Canada Trust'
-].map(name => ({ name })); 
+].map(name => ({ name }));
+
+export const SERVICES: ServiceBlock[] = [
+  {
+    icon: 'ConsultingIcon',
+    name: EToken.CONSULTING,
+    description: EToken.CONSULTING_DESC,
+    action: EToken.CONSULTING_ACTION
+  },
+  {
+    icon: 'SystemArchitectureIcon',
+    name: EToken.ARCHITECTURE,
+    description: EToken.ARCHITECTURE_DESC,
+    action: EToken.ARCHITECTURE_ACTION
+  },
+  {
+    icon: 'TeamIcon',
+    name: EToken.TEAM,
+    description: EToken.TEAM_DESC,
+    action: EToken.TEAM_ACTION
+  },
+  {
+    icon: 'CompleteSolutionIcon',
+    name: EToken.COMPLETE,
+    description: EToken.COMPLETE_DESC,
+    action: EToken.COMPLETE_ACTION,
+    completeSolution: true
+  }
+]; 

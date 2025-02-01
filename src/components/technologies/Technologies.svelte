@@ -3,6 +3,8 @@
   import { t } from '$l18n';
   import { TECHNOLOGIES } from '$constants';
   import CyberBackground from '$components/common/CyberBackground.svelte';
+
+  const technologies = TECHNOLOGIES.map(tech => tech.name as EToken);
 </script>
 
 <div id={EToken.ABOUT} class="about relative overflow-hidden">
@@ -10,8 +12,8 @@
   <div class="block relative mb-8">{$t(EToken.ABOUT_US)}</div>
 
   <div class="flex gap-4 flex-wrap relative">
-    {#each TECHNOLOGIES as { name }}
-      <div class="block technology">{name}</div>
+    {#each technologies as name}
+      <div class="block technology">{$t(name)}</div>
     {/each}
   </div>
 </div>
