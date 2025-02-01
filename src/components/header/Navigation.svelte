@@ -2,6 +2,7 @@
   import { t } from '$l18n';
   import navOptions from '$components/header/navOptions';
   import ThemeToggle from '$components/header/ThemeToggle.svelte';
+  import LanguageToggle from '$components/header/LanguageToggle.svelte';
 </script>
 
 <nav class="flex justify-around items-center">
@@ -11,6 +12,7 @@
     </a>
   {/each}
   <ThemeToggle />
+  <LanguageToggle />
 </nav>
 
 <style>

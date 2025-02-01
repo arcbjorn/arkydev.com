@@ -5,6 +5,7 @@
   import { ECompanyName } from '$components/enums';
   import MobileNavigation from '$components/header/MobileNavigation.svelte';
   import ThemeToggle from '$components/header/ThemeToggle.svelte';
+  import LanguageToggle from '$components/header/LanguageToggle.svelte';
 
   export let isLegalPage: boolean = false;
 </script>
@@ -13,19 +14,22 @@
   {#if isLegalPage}
     <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-8">
       <a href="/" class="flex flex-col">
-        <span class="text-md font-bold">{ECompanyName.FULL}</span>
+        <span class="text-md font-bold">{ECompanyName.SHORT} {$t(EToken.COMPANY_DEVELOPMENT)}</span>
         <span class="text-xs">{$t(EToken.SLOGAN)}</span>
       </a>
-      <ThemeToggle />
+      <div class="flex items-center gap-4">
+        <ThemeToggle />
+        <LanguageToggle />
+      </div>
     </div>
   {:else}
     <a href="/" class="hidden xs:flex lg:hidden flex-col">
-      <span class="text-md font-bold">{ECompanyName.FULL}</span>
+      <span class="text-md font-bold">{ECompanyName.SHORT} {$t(EToken.COMPANY_DEVELOPMENT)}</span>
       <span class="text-xs">{$t(EToken.SLOGAN)}</span>
     </a>
 
     <a href="/" class="xs:hidden flex-col">
-      <div class="text-base font-bold">{ECompanyName.FULL}</div>
+      <div class="text-base font-bold">{ECompanyName.SHORT} {$t(EToken.COMPANY_DEVELOPMENT)}</div>
     </a>
   {/if}
 
@@ -39,6 +43,7 @@
 
     <div class="lg:hidden flex items-center">
       <ThemeToggle />
+      <LanguageToggle />
       <MobileNavigation />
     </div>
   {/if}
