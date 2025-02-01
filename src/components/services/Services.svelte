@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SvelteComponent } from 'svelte';
+  import type { SvelteComponent, ComponentType, ComponentProps } from 'svelte';
   import { EToken } from '$l18n/enums';
   import { t } from '$l18n';
 
@@ -11,7 +11,7 @@
   import Service from '$components/services/Service.svelte';
 
   interface IServiceBlock {
-    icon: typeof SvelteComponent;
+    icon: ComponentType<SvelteComponent>;
     heading: string;
     description: string;
     actionText: string;

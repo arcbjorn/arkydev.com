@@ -20,7 +20,8 @@ const config = {
     alias: {
       $routes: 'src/routes',
       $components: 'src/components',
-      $l18n: 'src/l18n'
+      $l18n: 'src/l18n',
+      $constants: 'src/constants',
     }
   }
 };

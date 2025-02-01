@@ -1,16 +1,7 @@
 <script lang="ts">
   import { t } from '$l18n';
   import { EToken } from '$l18n/enums';
-
-  const companies = [
-    'Alphabet',
-    'IBM',
-    'Binance',
-    'Chime',
-    'Hitachi',
-    'Microsoft',
-    'TD Canada Trust'
-  ];
+  import { PARTNERS } from '../../constants';
 </script>
 
 <div class="flex flex-col py-12 gap-y-12 border-b-2">
@@ -19,13 +10,13 @@
   </div>
   <div class="partners">
     <div class="line">
-      {#each companies as company}
-        <div class="company px-12">{company}</div>
+      {#each PARTNERS as { name }}
+        <div class="company px-12">{name}</div>
       {/each}
     </div>
     <div class="line">
-      {#each companies as company}
-        <div class="company px-12">{company}</div>
+      {#each PARTNERS as { name }}
+        <div class="company px-12">{name}</div>
       {/each}
     </div>
   </div>

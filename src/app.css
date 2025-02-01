@@ -32,25 +32,17 @@ body {
 }
 
 .dynamic-underline {
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
+  @apply relative inline-block no-underline;
 }
 
 .dynamic-underline::after {
-  content: '';
-  position: absolute;
-  width: 100%;
+  @apply content-[''] absolute w-full h-[2px] bottom-0 left-0 bg-black;
   transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
   transform-origin: bottom right;
   transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .dynamic-underline:hover::after {
+  @apply origin-bottom-left;
   transform: scaleX(1);
-  transform-origin: bottom left;
 }

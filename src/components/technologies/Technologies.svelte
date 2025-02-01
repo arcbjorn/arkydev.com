@@ -1,22 +1,15 @@
 <script lang="ts">
   import { EToken } from '$l18n/enums';
   import { t } from '$l18n';
-
-  const technogolies: string[] = [
-    'Distributed systems',
-    'Blockchain solutions',
-    'Cross-platform Desktop apps',
-    'Cross-platform Mobile apps',
-    'Full-stack Web solutions'
-  ];
+  import { TECHNOLOGIES } from '$constants';
 </script>
 
 <div id={EToken.ABOUT} class="about">
   <div class="block">{$t(EToken.ABOUT_US)}</div>
 
   <div class="flex gap-4 flex-wrap">
-    {#each technogolies as technology}
-      <div class="block technology">{technology}</div>
+    {#each TECHNOLOGIES as { name }}
+      <div class="block technology">{name}</div>
     {/each}
   </div>
 </div>

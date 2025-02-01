@@ -1,5 +1,6 @@
 import { NAVIGATION_ANCHOR, type INavigationOption } from '$routes/types';
 import { EToken } from '$l18n/enums';
+import { PARTNERS } from '$constants';
 
 const navOptions: INavigationOption[] = [
   {

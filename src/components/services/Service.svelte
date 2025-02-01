@@ -4,9 +4,9 @@
   import { t } from '$l18n';
   import { EToken } from '$l18n/enums';
   import CallToAction from '$components/services/CallToAction.svelte';
-  import type { SvelteComponent } from 'svelte';
+  import type { ComponentType, SvelteComponent } from 'svelte';
 
-  export let icon: typeof SvelteComponent;
+  export let icon: ComponentType<SvelteComponent<{}>>;
   export let heading: string;
   export let actionText: string;
 </script>
