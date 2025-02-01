@@ -1,6 +1,14 @@
 import { expect, test } from '@playwright/test';
+import { ECompanyName } from '../src/components/enums';
 
-test('index page has expected h1', async ({ page }) => {
+test('homepage should have correct title', async ({ page }) => {
 	await page.goto('/');
-	expect(await page.textContent('h1')).toBe('Welcome to SvelteKit');
+	await expect(page).toHaveTitle(ECompanyName.FULL);
+});
+
+test('navigation links are working', async ({ page }) => {
+	await page.goto('/');
+	await expect(page.getByRole('link', { name: 'Services' })).toBeVisible();
+	await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
+	await expect(page.getByRole('link', { name: 'Contact' })).toBeVisible();
 });
