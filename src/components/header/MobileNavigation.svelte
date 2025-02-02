@@ -19,24 +19,23 @@
 </svelte:head>
 
 <button
-  class="w-10 h-10 relative focus:outline-none bg-white dark:bg-stone-950 border-black dark:border-stone-950"
-  class:border-2={!isOpen}
+  class="w-10 h-10 relative focus:outline-none bg-white dark:bg-stone-950 border-2 border-black dark:border-gray-300 hover:bg-black dark:hover:bg-white transition-colors duration-300 z-50 group ml-4"
   on:click={toggleMenu}
 >
   <span class="sr-only">Open main menu</span>
 
   <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
     <span
-      class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+      class="block absolute h-0.5 w-5 bg-black dark:bg-white group-hover:bg-white dark:group-hover:bg-black transform transition duration-500 ease-in-out"
       class:rotate-45={isOpen}
       class:-translate-y-1.5={!isOpen}
     />
     <span
-      class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+      class="block absolute h-0.5 w-5 bg-black dark:bg-white group-hover:bg-white dark:group-hover:bg-black transform transition duration-500 ease-in-out"
       class:opacity-0={isOpen}
     />
     <span
-      class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+      class="block absolute h-0.5 w-5 bg-black dark:bg-white group-hover:bg-white dark:group-hover:bg-black transform transition duration-500 ease-in-out"
       class:-rotate-45={isOpen}
       class:translate-y-1.5={!isOpen}
     />
@@ -44,16 +43,14 @@
 </button>
 
 {#if isOpen}
-  <div class="w-full h-screen z-90 left-0 top-30 bg-white dark:bg-stone-950 absolute">
-    <div class="relative flex flex-col items-center justify-evenly h-full">
-      <ul class="relative">
+  <div class="fixed inset-0 z-40 bg-white dark:bg-stone-950">
+    <div class="flex flex-col items-center justify-center h-screen">
+      <ul class="space-y-8 text-center">
         {#each navOptions as option}
-          <li class="relative text-2xl">
+          <li>
             <a
-              class="flex items-center p-6 h-12 text-ellipsis whitespace-nowrap hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white transition duration-300 ease-in-out"
+              class="text-2xl px-8 py-4 inline-block text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300"
               href={option.anchor}
-              data-mdb-ripple="true"
-              data-mdb-ripple-color="dark"
               on:click={toggleMenu}
             >
               {$t(option.token)}
@@ -61,7 +58,9 @@
           </li>
         {/each}
       </ul>
-      <Logo />
+      <div class="mt-16">
+        <Logo />
+      </div>
     </div>
   </div>
 {/if}
