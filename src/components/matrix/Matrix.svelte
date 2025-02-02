@@ -5,8 +5,6 @@
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
-  let animationId: number;
-  let isInViewport = false;
 
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   const fontSize = 14;
@@ -15,7 +13,7 @@
 
   function initMatrix() {
     const width = window.innerWidth;
-    const height = 300;
+    const height = 300; // Fixed height for the section
 
     canvas.width = width;
     canvas.height = height;
@@ -27,17 +25,8 @@
     ctx.font = `${fontSize}px monospace`;
   }
 
-  function checkInViewport() {
-    const rect = canvas.getBoundingClientRect();
-    isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
-  }
-
   function draw() {
-    if (!isInViewport) {
-      animationId = requestAnimationFrame(draw);
-      return;
-    }
-
+    // Use white fade in light mode, black fade in dark mode
     const fadeColor = document.documentElement.classList.contains('dark')
       ? 'rgba(0, 0, 0, 0.02)'
       : 'rgba(255, 255, 255, 0.02)';
@@ -45,6 +34,7 @@
     ctx.fillStyle = fadeColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    // Use black in light mode, white in dark mode
     ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#FFF' : '#000';
 
     drops.forEach((y, i) => {
@@ -61,34 +51,15 @@
       drops[i]++;
     });
 
-    animationId = requestAnimationFrame(draw);
-  }
-
-  let resizeTimeout: number;
-  function handleResize() {
-    if (resizeTimeout) {
-      window.clearTimeout(resizeTimeout);
-    }
-    resizeTimeout = window.setTimeout(() => {
-      initMatrix();
-    }, 250);
+    requestAnimationFrame(draw);
   }
 
   onMount(() => {
     initMatrix();
-    checkInViewport();
-    animationId = requestAnimationFrame(draw);
+    draw();
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', checkInViewport, { passive: true });
-
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', checkInViewport);
-    };
+    window.addEventListener('resize', initMatrix);
+    return () => window.removeEventListener('resize', initMatrix);
   });
 </script>
 
@@ -97,7 +68,7 @@
     <div class="title dark:text-white">
       {$t(EToken.MATRIX)}
     </div>
-    <canvas bind:this={canvas} class="w-full" />
+    <canvas bind:this={canvas} />
   </div>
 </div>
 
