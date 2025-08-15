@@ -9,6 +9,7 @@
   import Footer from '$components/footer/Footer.svelte';
   import Technologies from '$components/technologies/Technologies.svelte';
   import Matrix from '$components/matrix/Matrix.svelte';
+  import LazyLoad from '$components/common/LazyLoad.svelte';
 </script>
 
 <svelte:head>
@@ -22,6 +23,8 @@
 
 <Services />
 <Technologies />
-<Matrix />
+<LazyLoad threshold={0.1} rootMargin="100px">
+  <Matrix />
+</LazyLoad>
 <Contact />
 <Footer />
