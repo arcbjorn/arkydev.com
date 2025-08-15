@@ -1,4 +1,4 @@
-import type { EToken, ELanguage } from "$l18n/enums";
+import type { EToken, ELanguage, ETheme, EIconName, EButtonVariant } from "$lib/constants";
 
 export interface Technology {
   name: string;
@@ -20,11 +20,9 @@ export interface ServiceBlock {
   completeSolution?: boolean;
 }
 
-export type Theme = 'light' | 'dark';
-
-export type IconName = 'sun' | 'moon' | 'menu' | 'close';
-
-export type ButtonVariant = 'nav' | 'action' | 'mobile-nav' | 'toggle';
+export type Theme = ETheme;
+export type IconName = EIconName;
+export type ButtonVariant = EButtonVariant;
 
 export interface ButtonProps {
   variant?: ButtonVariant;
