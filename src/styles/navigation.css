@@ -40,7 +40,7 @@
 }
 
 .mobile-nav-button {
-  @apply w-10 h-10 relative focus:outline-none bg-white dark:bg-stone-950 border-2 border-black dark:border-gray-300 hover:bg-black dark:hover:bg-white transition-colors duration-300 z-50 group ml-4;
+  @apply w-10 h-10 relative focus:outline-none bg-white dark:bg-stone-950 border-2 border-black dark:border-gray-300 hover:bg-black dark:hover:bg-white transition-colors duration-300 z-50 ml-4;
 }
 
 .hamburger-line {

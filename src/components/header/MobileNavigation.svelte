@@ -26,7 +26,7 @@
 </script>
 
 <button
-  class="mobile-nav-button"
+  class="mobile-nav-button group"
   on:click={toggleMenu}
 >
   <span class="sr-only">Open main menu</span>
