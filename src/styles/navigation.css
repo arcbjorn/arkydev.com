@@ -1,0 +1,52 @@
+.nav-option {
+  @apply px-4 sm:px-8 dark:text-white transition-colors duration-300;
+}
+
+.nav-option:hover {
+  position: relative;
+  background:
+    linear-gradient(
+        to bottom,
+        currentColor 1.2px,
+        transparent 1.2px,
+        transparent calc(100% - 1.2px),
+        currentColor calc(100% - 1.2px)
+      )
+      no-repeat,
+    linear-gradient(
+        to left,
+        currentColor 1.2px,
+        transparent 1.2px,
+        transparent calc(100% - 1.2px),
+        currentColor calc(100% - 1.2px)
+      )
+      no-repeat;
+  background-position: center;
+  background-size:
+    calc(100% - 0.75em) 100%,
+    100% calc(100% - 0.75em);
+}
+
+.mobile-menu-overlay {
+  @apply fixed inset-0 z-40 bg-white dark:bg-stone-950;
+}
+
+.mobile-menu-container {
+  @apply flex flex-col items-center justify-center h-screen;
+}
+
+.mobile-menu-list {
+  @apply space-y-8 text-center;
+}
+
+.mobile-nav-button {
+  @apply w-10 h-10 relative focus:outline-none bg-white dark:bg-stone-950 border-2 border-black dark:border-gray-300 hover:bg-black dark:hover:bg-white transition-colors duration-300 z-50 group ml-4;
+}
+
+.hamburger-line {
+  @apply block absolute h-0.5 w-5 bg-black dark:bg-white group-hover:bg-white dark:group-hover:bg-black transform transition duration-500 ease-in-out;
+}
+
+.hamburger-container {
+  @apply block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
