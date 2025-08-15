@@ -1,5 +1,5 @@
 import type { Technology, Partner, ServiceBlock } from '$types';
-import { EToken } from '$l18n/enums';
+import { EToken, EServiceIcon, COMPANY_PARTNERS } from '$lib/constants';
 
 export const TECHNOLOGIES: Technology[] = [
   {
@@ -28,37 +28,29 @@ export const TECHNOLOGIES: Technology[] = [
   }
 ];
 
-export const PARTNERS: Partner[] = [
-  'Alphabet',
-  'IBM',
-  'Binance',
-  'Chime',
-  'Hitachi',
-  'Microsoft',
-  'TD Canada Trust'
-].map(name => ({ name }));
+export const PARTNERS: Partner[] = COMPANY_PARTNERS.map(name => ({ name }));
 
 export const SERVICES: ServiceBlock[] = [
   {
-    icon: 'ConsultingIcon',
+    icon: EServiceIcon.CONSULTING,
     name: EToken.CONSULTING,
     description: EToken.CONSULTING_DESC,
     action: EToken.CONSULTING_ACTION
   },
   {
-    icon: 'SystemArchitectureIcon',
+    icon: EServiceIcon.SYSTEM_ARCHITECTURE,
     name: EToken.ARCHITECTURE,
     description: EToken.ARCHITECTURE_DESC,
     action: EToken.ARCHITECTURE_ACTION
   },
   {
-    icon: 'TeamIcon',
+    icon: EServiceIcon.TEAM,
     name: EToken.TEAM,
     description: EToken.TEAM_DESC,
     action: EToken.TEAM_ACTION
   },
   {
-    icon: 'CompleteSolutionIcon',
+    icon: EServiceIcon.COMPLETE_SOLUTION,
     name: EToken.COMPLETE,
     description: EToken.COMPLETE_DESC,
     action: EToken.COMPLETE_ACTION,
