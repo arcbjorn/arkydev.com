@@ -1,17 +1,24 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte';
   import type { ButtonVariant } from '$types';
   
   export let variant: ButtonVariant = 'nav';
   export let href: string | undefined = undefined;
   export let type: 'button' | 'submit' | 'reset' = 'button';
+
+  const dispatch = createEventDispatcher();
+
+  function handleClick(event: MouseEvent) {
+    dispatch('click', event);
+  }
 </script>
 
 {#if href}
-  <a {href} class="btn-{variant}" {...$$restProps}>
+  <a {href} class="btn-{variant}" on:click={handleClick} {...$$restProps}>
     <slot />
   </a>
 {:else}
-  <button {type} class="btn-{variant}" {...$$restProps}>
+  <button {type} class="btn-{variant}" on:click={handleClick} {...$$restProps}>
     <slot />
   </button>
 {/if}
