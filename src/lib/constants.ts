@@ -62,11 +62,7 @@ export enum ERoutes {
   TERMS = '/terms'
 }
 
-export const NAVIGATION_ANCHORS = {
-  [EToken.SERVICES]: '#services',
-  [EToken.ABOUT]: '#about',
-  [EToken.CONTACT]: '#contact'
-} as const;
+// Navigation anchors are defined in routes/types.ts to avoid circular imports
 
 // =============================================================================
 // SERVICES
@@ -121,10 +117,10 @@ export enum EAnimationDuration {
 // LAZY LOADING
 // =============================================================================
 
-export enum ELazyLoadDefaults {
-  THRESHOLD = 0.1,
-  ROOT_MARGIN = '100px'
-}
+export const LAZY_LOAD_DEFAULTS = {
+  THRESHOLD: 0.1,
+  ROOT_MARGIN: '100px'
+} as const;
 
 // =============================================================================
 // TYPE GUARDS & UTILITIES
