@@ -1,8 +1,9 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
+  import { EButtonVariant } from '$lib/constants';
   import type { ButtonVariant } from '$types';
   
-  export let variant: ButtonVariant = 'nav';
+  export let variant: ButtonVariant = EButtonVariant.NAV;
   export let href: string | undefined = undefined;
   export let type: 'button' | 'submit' | 'reset' = 'button';
 
