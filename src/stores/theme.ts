@@ -1,6 +1,5 @@
 import { writable } from 'svelte/store';
-
-type Theme = 'light' | 'dark';
+import type { Theme } from '$types';
 
 // Check if user has a theme preference saved
 const userTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') as Theme : 'light';
