@@ -3,6 +3,7 @@
   import navOptions from '$components/header/navOptions';
   import Logo from '$components/common/Logo.svelte';
   import Button from '$components/common/Button.svelte';
+  import { EButtonVariant } from '$lib/constants';
   import { isMenuOpen, toggleMenu, closeMenu } from '$stores/navigation';
   import { onMount } from 'svelte';
 
@@ -56,7 +57,7 @@
         {#each navOptions as option}
           <li>
             <Button
-              variant="mobile-nav"
+              variant={EButtonVariant.MOBILE_NAV}
               href={option.anchor}
               on:click={handleLinkClick}
             >
