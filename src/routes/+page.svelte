@@ -1,7 +1,6 @@
 <script lang="ts">
   import { t } from '$l18n';
-  import { EToken } from '$l18n/enums';
-  import { ECompanyName } from '$components/enums';
+  import { EToken, ECompanyName, LAZY_LOAD_DEFAULTS } from '$lib/constants';
   import Main from '$components/main/Main.svelte';
   import Services from '$components/services/Services.svelte';
   import Header from '$components/header/Header.svelte';
@@ -23,7 +22,7 @@
 
 <Services />
 <Technologies />
-<LazyLoad threshold={0.1} rootMargin="100px">
+<LazyLoad threshold={LAZY_LOAD_DEFAULTS.THRESHOLD} rootMargin={LAZY_LOAD_DEFAULTS.ROOT_MARGIN}>
   <Matrix />
 </LazyLoad>
 <Contact />
