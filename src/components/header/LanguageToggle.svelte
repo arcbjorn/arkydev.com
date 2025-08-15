@@ -1,6 +1,6 @@
 <script lang="ts">
   import { language } from '$stores/language';
-  import { ELanguage } from '$l18n/enums';
+  import { ELanguage } from '$lib/constants';
   import FlagJapan from '$components/common/FlagJapan.svelte';
   import FlagUK from '$components/common/FlagUK.svelte';
 
