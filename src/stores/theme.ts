@@ -1,18 +1,22 @@
 import { writable } from 'svelte/store';
+import { browser } from '$app/environment';
 import type { Theme } from '$types';
 
-// Check if user has a theme preference saved
-const getInitialTheme = (): Theme => {
-  if (typeof window === 'undefined') return 'light';
+// Initialize with light theme for SSR
+export const theme = writable<Theme>('light');
+
+// Only run on client side
+if (browser) {
+  // Get saved theme from localStorage
   const savedTheme = localStorage.getItem('theme') as Theme;
-  return savedTheme || 'light';
-};
+  if (savedTheme) {
+    theme.set(savedTheme);
+  }
+}
 
-export const theme = writable<Theme>(getInitialTheme());
-
-// Update theme and save to localStorage
+// Subscribe to changes and update DOM/localStorage
 theme.subscribe(value => {
-  if (typeof window !== 'undefined') {
+  if (browser) {
     localStorage.setItem('theme', value);
     if (value === 'dark') {
       document.documentElement.classList.add('dark');
@@ -20,12 +24,4 @@ theme.subscribe(value => {
       document.documentElement.classList.remove('dark');
     }
   }
-});
-
-// Initialize theme on client side
-if (typeof window !== 'undefined') {
-  const savedTheme = localStorage.getItem('theme') as Theme;
-  if (savedTheme) {
-    theme.set(savedTheme);
-  }
-} 
+}); 
