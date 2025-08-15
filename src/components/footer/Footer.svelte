@@ -46,7 +46,7 @@
       >
     </div>
   </div>
-  <span class="text-center p-4 text-xs">{currentYear} {$t(EToken.COPYRIGHT)}</span>
+  <span class="text-center p-4 text-xs">{$t(EToken.COPYRIGHT, { year: currentYear })}</span>
 </footer>
 
 <style>
