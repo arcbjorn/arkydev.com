@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { EToken } from '$l18n/enums';
   import { t } from '$l18n';
-  import { ECompanyEmail, ECompanyName } from '$components/enums';
+  import { EToken, ECompanyEmail, ECompanyName, ECompanyContact } from '$lib/constants';
   import Logo from '$components/common/Logo.svelte';
   import MailIcon from '$components/footer/MailIcon.svelte';
   import TelegramIcon from '$components/footer/TelegramIcon.svelte';
@@ -21,7 +20,7 @@
             >
           </div>
         </a>
-        <p class="text-xs pl-4">Legal ID: 316366767</p>
+        <p class="text-xs pl-4">Legal ID: {ECompanyContact.LEGAL_ID}</p>
       </div>
 
       <div class="flex flex-col p-4 gap-y-1">
@@ -41,7 +40,7 @@
         class="link hover:text-gray-600 dark:hover:text-gray-300"
         href={'mailto:' + ECompanyEmail.HELLO}><MailIcon /></a
       >
-      <a class="hover:text-gray-600 dark:hover:text-gray-300" href="https://t.me/arcbjorn"
+      <a class="hover:text-gray-600 dark:hover:text-gray-300" href={ECompanyContact.TELEGRAM_URL}
         ><TelegramIcon /></a
       >
     </div>

@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { EToken } from '$l18n/enums';
   import { t } from '$l18n';
-  import { ECompanyEmail } from '$components/enums';
+  import { EToken, ECompanyEmail, ECompanyContact } from '$lib/constants';
   import CyberBackground from '$components/common/CyberBackground.svelte';
 </script>
 
@@ -13,7 +12,7 @@
     <span class="links">
       <a class="link" href={'mailto:' + ECompanyEmail.HELLO}> email </a>
       &
-      <a class="link" href="https://t.me/arcbjorn"> telegram </a>
+      <a class="link" href={ECompanyContact.TELEGRAM_URL}> telegram </a>
     </span>
   </div>
 </div>
