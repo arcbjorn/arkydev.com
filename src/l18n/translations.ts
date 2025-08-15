@@ -62,7 +62,7 @@ const translations: TTranslations = {
     [EToken.TECH_WEB_DESC]: 'End-to-end web applications',
     [EToken.COMPANY_DEVELOPMENT]: 'Development',
     [EToken.MATRIX]: 'Embracing the Future',
-    [EToken.COPYRIGHT]: '© 2025 Arky Software Development Corporation. All rights reserved.'
+    [EToken.COPYRIGHT]: '© {{year}} Arky Software Development Corporation. All rights reserved.'
   },
   [ELanguage.JA]: {
     [EToken.SERVICES]: 'サービス',
@@ -124,7 +124,7 @@ const translations: TTranslations = {
     [EToken.TECH_WEB_DESC]: 'エンドツーエンドのWebアプリケーション',
     [EToken.COMPANY_DEVELOPMENT]: '開発',
     [EToken.MATRIX]: '未来を受け入れる',
-    [EToken.COPYRIGHT]: '© 2025 Arky ソフトウェア開発株式会社. 全著作権所有。'
+    [EToken.COPYRIGHT]: '© {{year}} Arky ソフトウェア開発株式会社. 全著作権所有。'
   }
 };
 
