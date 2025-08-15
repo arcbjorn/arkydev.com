@@ -1,10 +1,11 @@
-import { derived, writable } from 'svelte/store';
+import { derived } from 'svelte/store';
+import { language as lang } from '$stores/language';
 import translations from '$l18n/translations';
 
 import { ELanguage, type EToken } from '$l18n/enums';
 import type { TTranslationVariables } from '$l18n/types';
 
-export const lang = writable(ELanguage.EN);
+export { lang };
 export const langs = Object.keys(translations);
 
 function translate(lang: ELanguage, token: EToken, vars: TTranslationVariables) {
@@ -20,7 +21,10 @@ function translate(lang: ELanguage, token: EToken, vars: TTranslationVariables) 
 	if (vars) {
 		Object.keys(vars).map((k) => {
 			const regex = new RegExp(`{{${k}}}`, 'g');
-			text = text.replace(regex, vars[k]);
+			const value = vars[k];
+			if (value !== undefined) {
+				text = text.replace(regex, value);
+			}
 		});
 	}
 
