@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { lang } from '$l18n';
+  import { language } from '$stores/language';
   import { ELanguage } from '$l18n/enums';
   import FlagJapan from '$components/common/FlagJapan.svelte';
   import FlagUK from '$components/common/FlagUK.svelte';
 
   const toggleLanguage = () => {
-    $lang = $lang === ELanguage.EN ? ELanguage.JA : ELanguage.EN;
+    language.update(lang => lang === ELanguage.EN ? ELanguage.JA : ELanguage.EN);
   };
 </script>
 
 <button type="button" title="Toggle Language" on:click={toggleLanguage} class="languageToggle">
   <div class="flagWrapper">
-    {#if $lang === ELanguage.EN}
+    {#if $language === ELanguage.EN}
       <FlagJapan />
     {:else}
       <FlagUK />
